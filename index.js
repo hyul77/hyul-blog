@@ -1,4 +1,4 @@
-import { writeFileSync } from 'node:fs';
+import { appendFileSync } from 'node:fs';
 import Parser from "rss-parser";
 
 /**
@@ -26,8 +26,8 @@ const parser = new Parser({
         text += `<a href="${link}">${title}</a></br>`;
     }
 
-    // README.md 파일 작성
-    writeFileSync('README.md', text, 'utf8', (e) => {
+    // README.md 파일에 내용 추가
+    appendFileSync('README.md', text, 'utf8', (e) => {
         console.log(e)
     })
 

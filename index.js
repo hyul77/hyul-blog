@@ -18,7 +18,7 @@ const parser = new Parser({
     const feed = await parser.parseURL('https://hyul-code.tistory.com/rss');
 
     // 최신 2개의 글의 제목과 링크를 가져온 후 text에 추가
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 1; i++) {
         const { title, link } = feed.items[i];
         console.log(`${i + 1}번째 게시물`);
         console.log(`추가될 제목: ${title}`);
